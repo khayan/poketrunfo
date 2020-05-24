@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from '../src/img/icons/pokeball.png';
 import './App.css';
+import pokemons from './pokemons'
 
-function App() {
+export default function App() {
+  console.log(pokemons);
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Poké Trunfo
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {
+          pokemons.map(pokemon => <img src={pokemon} alt="pokemon" />)
+        }
       </header>
     </div>
   );
 }
-
-export default App;
